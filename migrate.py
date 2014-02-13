@@ -2,12 +2,19 @@ __author__ = 'mrkaiser'
 
 from flask import Flask, request, jsonify
 from flask.ext.sqlalchemy import SQLAlchemy
+from flask.ext.script import Manager
+from flask.ext.migrate import Migrate, MigrateCommand
 import os
 
 app = Flask(__name__)
 db = SQLAlchemy(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL',
                                                        "mysql+mysqlconnector://username:password@localhost/database")
+
+migrate = Migrate(app, db)
+
+manager = Manager(app)
+manager.add_command('db', MigrateCommand)
 
 
 class Person(db.Model):
@@ -36,7 +43,7 @@ class Track(db.Model):
     events = db.relationship('Event', backref='tracks')
 
     def __repr__(self):
-        return "Track<name=%s, tagline=%s, url=%s, desc=%s, director=%s" % (
+        return "Track<name=%s, tagline=%s, url=%s, desc=%s, director=%s>" % (
             self.name, self.tagline, self.url, self.desc, self.director)
 
 
@@ -61,3 +68,7 @@ class Event(db.Model):
     location_id = db.Column(db.Integer, db.ForeignKey('locations.id'))
     desc = db.Column(db.String(500))
     track_id = db.Column(db.Integer, db.ForeignKey('tracks.id'))
+
+
+if __name__ == '__main__':
+    manager.run()

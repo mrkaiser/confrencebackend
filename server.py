@@ -2,10 +2,9 @@ __author__ = 'mrkaiser'
 
 from flask import Flask, request, jsonify
 from flask.ext.sqlalchemy import SQLAlchemy
-from migrate import db, Person, Event, Track, Location
+from migrate import db, app, Person, Event, Track, Location
 import os
 
-app = Flask(__name__)
 
 
 @app.route('/people/', methods=['GET'])

@@ -30,6 +30,14 @@ class Person(db.Model):
     def __repr__(self):
         return "Person<first_name=%s,last_name=%s,url=%s" % (self.first_name, self.last_name, self.url)
 
+    def to_json(self):
+        return {'id': self.id,
+                'first_name': self.first_name,
+                'last_name': self.last_name,
+                'url': self.url,
+                'about': self.about,
+                }
+
 
 class Track(db.Model):
     __tablename__ = 'tracks'
@@ -46,6 +54,14 @@ class Track(db.Model):
         return "Track<name=%s, tagline=%s, url=%s, desc=%s, director=%s>" % (
             self.name, self.tagline, self.url, self.desc, self.director)
 
+    def to_json(self):
+        return {'id': self.id,
+                'self': self.name,
+                'tagline': self.tagline,
+                'url': self.url,
+                'desc': self.desc,
+                'director': self.director}
+
 
 class Location(db.Model):
     __tablename__ = 'locations'
@@ -59,6 +75,12 @@ class Location(db.Model):
     def __repr__(self):
         return "Location<room=%s,building=%s, note=%s>" % (self.room, self.building, self.note)
 
+    def to_json(self):
+        return {'id': self.id,
+                'room': self.room,
+                'building': self.building,
+                'note': self.note}
+
 
 class Event(db.Model):
     __tablename__ = 'events'
@@ -70,6 +92,16 @@ class Event(db.Model):
     desc = db.Column(db.String(500))
     track_id = db.Column(db.Integer, db.ForeignKey('tracks.id'))
     track = db.relationship('Track', backref=db.backref('posts', lazy='dynamic'))
+
+    def __repr__(self):
+        return "Event<title=%s,location=%s,desc=%s,track=%s>" % (self.title, self.location, self.desc, self.track)
+
+    def to_json(self):
+        return {'id': self.id,
+                'title': self.title,
+                'location': self.location,
+                'desc': self.desc,
+                'track': self.track}
 
 
 if __name__ == '__main__':

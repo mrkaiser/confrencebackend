@@ -3,6 +3,7 @@ __author__ = 'mrkaiser'
 from flask import Flask, request, jsonify
 from flask.ext.sqlalchemy import SQLAlchemy
 from migrate import db, app, Person, Event, Track, Location
+import json
 import os
 
 
@@ -14,12 +15,7 @@ def people():
 
         json_results = []
         for result in results:
-            d = {'id': result.id,
-                 'first_name': result.first_name,
-                 'last_name': result.last_name,
-                 'url': result.url,
-                 'about': result.about}
-            json_results.append(d)
+            json_results.append(json.dumps(result.to_json()))
 
         return jsonify(items=json_results)
 
@@ -31,12 +27,7 @@ def events():
 
         json_results = []
         for result in results:
-            d = {'id': result.id,
-                 'title': result.title,
-                 'location': result.location_id,
-                 'desc': result.desc,
-                 'track': result.track_id}
-            json_results.append(d)
+            json_results.append(json.dumps(result.to_json()))
 
         return jsonify(items=json_results)
 

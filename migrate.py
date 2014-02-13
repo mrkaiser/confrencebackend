@@ -66,8 +66,10 @@ class Event(db.Model):
     id = db.Column(db.Integer, db.Sequence('event_id_seq'), primary_key=True)
     title = db.Column(db.String(100))
     location_id = db.Column(db.Integer, db.ForeignKey('locations.id'))
+    location = db.relationship('Location', backref=db.backref('posts', lazy='dynamic'))
     desc = db.Column(db.String(500))
     track_id = db.Column(db.Integer, db.ForeignKey('tracks.id'))
+    track = db.relationship('Track', backref=db.backref('posts', lazy='dynamic'))
 
 
 if __name__ == '__main__':

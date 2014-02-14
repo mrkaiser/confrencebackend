@@ -4,7 +4,9 @@ from flask import Flask, request, jsonify
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.script import Manager
 from flask.ext.migrate import Migrate, MigrateCommand
+import json
 import os
+
 
 app = Flask(__name__)
 db = SQLAlchemy(app)
@@ -99,9 +101,9 @@ class Event(db.Model):
     def to_json(self):
         return {'id': self.id,
                 'title': self.title,
-                'location': self.location,
+                'location': self.location.to_json(),
                 'desc': self.desc,
-                'track': self.track}
+                'track': self.track.to_json()}
 
 
 if __name__ == '__main__':

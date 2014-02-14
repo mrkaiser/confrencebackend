@@ -56,7 +56,7 @@ class Track(db.Model):
 
     def to_json(self):
         return {'id': self.id,
-                'self': self.name,
+                'name': self.name,
                 'tagline': self.tagline,
                 'url': self.url,
                 'desc': self.desc,

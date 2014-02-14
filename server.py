@@ -15,7 +15,7 @@ def people():
 
         json_results = []
         for result in results:
-            json_results.append(json.dumps(result.to_json()))
+            json_results.append(result.to_json())
 
         return jsonify(items=json_results)
 
@@ -27,7 +27,7 @@ def events():
 
         json_results = []
         for result in results:
-            json_results.append(json.dumps(result.to_json()))
+            json_results.append(result.to_json())
 
         return jsonify(items=json_results)
 

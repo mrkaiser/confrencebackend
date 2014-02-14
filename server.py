@@ -3,7 +3,6 @@ __author__ = 'mrkaiser'
 from flask import Flask, request, jsonify
 from flask.ext.sqlalchemy import SQLAlchemy
 from migrate import db, app, Person, Event, Track, Location
-import json
 import os
 
 

@@ -26,7 +26,7 @@
       <file leaf-file-name="event_body_scrapping.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/event_body_scrapping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="17" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+            <state line="30" column="67" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
               <folding />
             </state>
           </provider>
@@ -64,7 +64,7 @@
       <file leaf-file-name="event_parser.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/event_parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="8" selection-start="58" selection-end="58" vertical-scroll-proportion="0.11320755" vertical-offset="0" max-vertical-offset="530">
+            <state line="7" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.1981132" vertical-offset="0" max-vertical-offset="530">
               <folding />
             </state>
           </provider>
@@ -85,9 +85,9 @@
         <option value="$PROJECT_DIR$/server.py" />
         <option value="$PROJECT_DIR$/trackscraper.py" />
         <option value="$PROJECT_DIR$/tests/tests.py" />
-        <option value="$PROJECT_DIR$/tests/event_body_scrapping.py" />
         <option value="$PROJECT_DIR$/parser.py" />
         <option value="$PROJECT_DIR$/event_body_scrapping.py" />
+        <option value="$PROJECT_DIR$/tests/event_body_scrapping.py" />
         <option value="$PROJECT_DIR$/event_parser.py" />
       </list>
     </option>
@@ -162,6 +162,7 @@
   <component name="PropertiesComponent">
     <property name="FullScreen" value="true" />
     <property name="SearchEverywhereHistory" value="" />
+    <property name="recentsLimit" value="5" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -174,7 +175,31 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python tests.Unittests in /Users/mrkaiser/PycharmProjects/confrencebackend">
+    <configuration default="false" name="Unittests in $PROJECT_DIR$" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="confrencebackend" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$" />
+      <option name="TEST_TYPE" value="TEST_FOLDER" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -296,7 +321,14 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <list size="0" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in /Users/mrkaiser/PycharmProjects/confrencebackend" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in /Users/mrkaiser/PycharmProjects/confrencebackend" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
@@ -434,13 +466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/event_body_scrapping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/trackscraper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="0" selection-start="1649" selection-end="1649" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
@@ -450,9 +475,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/event_body_scrapping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="67" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/event_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="8" selection-start="58" selection-end="58" vertical-scroll-proportion="0.11320755" vertical-offset="0" max-vertical-offset="530">
+        <state line="7" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.1981132" vertical-offset="0" max-vertical-offset="530">
           <folding />
         </state>
       </provider>
